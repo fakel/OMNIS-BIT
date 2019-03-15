@@ -70,7 +70,7 @@ function main() {
     }, 5000);
 
     if (window.usingNet == 3) {
-        window.omnis = ''; //Ropsten address of contract
+        window.omnis = '0x7e77e23aa6db1fa95c5587a277204489e0d5ef7e'; //Ropsten address of contract
     } else {
         window.omnis = ''; //Main net address of contract
     }
