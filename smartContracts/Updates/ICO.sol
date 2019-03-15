@@ -321,7 +321,7 @@ contract ICO {
         //Only on success
         require(state == State.successful, "Wrong Stage");
         //Only after 30 days claim period for referrals
-        require(now >= completedAt.add(30 days)), "Too early to retrieve";
+        require(now >= completedAt.add(30 days), "Too early to retrieve");
 
         uint256 remanent = tokenReward.balanceOf(address(this));
 
