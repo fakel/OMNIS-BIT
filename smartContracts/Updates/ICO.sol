@@ -128,7 +128,7 @@ contract ICO {
 
     /**
      * @notice ICO constructor
-     * @param _addressOfTokenUsedAsReward is the token totalDistributed
+     * @param _addressOfTokenUsedAsReward is the token to distributed
      * @param _beneficiary is the address that will receive funds collected
      */
     constructor(ERC20Interface _addressOfTokenUsedAsReward, address payable _beneficiary) public {
