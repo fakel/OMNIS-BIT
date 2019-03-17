@@ -33,11 +33,11 @@ library SafeMath {
 // ERC20 Token Standard Interface
 // ----------------------------------------------------------------------------
 interface ERC20Interface {
-    function totalSupply() external view returns(uint);
+    function totalSupply() external returns(uint);
 
-    function balanceOf(address tokenOwner) external view returns(uint balance);
+    function balanceOf(address tokenOwner) external returns(uint balance);
 
-    function allowance(address tokenOwner, address spender) external view returns(uint remaining);
+    function allowance(address tokenOwner, address spender) external returns(uint remaining);
 
     function transfer(address to, uint tokens) external returns(bool success);
 
@@ -54,7 +54,7 @@ interface ERC20Interface {
 // ----------------------------------------------------------------------------
 interface DateTimeAPI {
 
-    function toTimestamp(uint16 year, uint8 month, uint8 day, uint8 hour, uint8 minute) external view returns(uint timestamp);
+    function toTimestamp(uint16 year, uint8 month, uint8 day, uint8 hour, uint8 minute) external returns(uint timestamp);
 
 }
 
@@ -66,10 +66,10 @@ contract ICO {
 // ----------------------------------------------------------------------------
 // DateTime API Contract Addresses for each network
 // ----------------------------------------------------------------------------
-    //DateTimeAPI dateTimeContract = DateTimeAPI(0x1a6184CD4C5Bea62B0116de7962EE7315B7bcBce);//Main
+    DateTimeAPI dateTimeContract = DateTimeAPI(0x1a6184CD4C5Bea62B0116de7962EE7315B7bcBce);//Main
     //DateTimeAPI dateTimeContract = DateTimeAPI(0x71b6e049E78c75fC61480357CD5aA1B81E1b16E0);//Kovan
     //DateTimeAPI dateTimeContract = DateTimeAPI(0x670b2B167e13b131C491D87bA745dA41f07ecbc3);//Rinkeby
-    DateTimeAPI dateTimeContract = DateTimeAPI(0x1F0a2ba4B115bd3e4007533C52BBd30C17E8B222); //Ropsten
+    //DateTimeAPI dateTimeContract = DateTimeAPI(0x1F0a2ba4B115bd3e4007533C52BBd30C17E8B222); //Ropsten
 
     using SafeMath
     for uint256;
