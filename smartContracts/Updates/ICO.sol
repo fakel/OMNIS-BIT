@@ -175,7 +175,7 @@ contract ICO {
 
         } else if (state == State.ICO) {
 
-            //tequire ico stage has begin
+            //require ico stage has begin
             require(now > dateTimeContract.toTimestamp(2019, 4, 20, 0, 0),"Too early for the ICO begin"); 
 
             if (now <= dateTimeContract.toTimestamp(2019, 4, 22, 23, 59)) { //>20/4/2019 00:00 GMT <22/4/2019 23:59 GMT
@@ -312,7 +312,7 @@ contract ICO {
     }
 
     /**
-     * @notice referral bounty claim
+     * @notice remaining tokens retrieve
      */
     function retrieveTokens() public {
 
